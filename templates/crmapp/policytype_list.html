@@ -1,0 +1,18 @@
+{% extends "crmapp/base.html" %}
+{%block body_block%}
+    <h1>Policy Types:</h1>
+    <table border="2">
+        <thead>
+            <th>ID</th>
+            <th>Policy Type</th>
+        </thead>
+        {% for i in policytype_list %}
+        <tr>
+            <td><a href="/{{i.id}}">{{i.id}}</a></td>
+            <td>{{i.policy_type}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br/><br/><br/>
+    <a href="/policytypecreate">Add Policy Type</a>
+{%endblock%}

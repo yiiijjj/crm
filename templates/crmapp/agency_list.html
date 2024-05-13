@@ -1,0 +1,20 @@
+{% extends "crmapp/base.html" %}
+{%block body_block%}
+    <h1>Agency:</h1>
+    <table border="2">
+        <thead>
+            <th>ID</th>
+            <th>Agency Name</th>
+            <th>Address</th>
+        </thead>
+        {% for i in agency_list %}
+        <tr>
+            <td><a href="/{{i.id}}">{{i.id}}</a></td>
+            <td>{{i.agency_name}}</td>
+            <td>{{i.address}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br/><br/><br/>
+    <a href="/agencycreate">Add agency</a>
+{%endblock%}

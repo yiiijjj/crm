@@ -1,0 +1,9 @@
+{% extends "crmapp/base.html" %}
+{%block body_block%}
+    <h1>Building Type Details</h1>
+    <ol>
+        <h3><li>Building Type: {{buildingtype.building_type}}</li></h3>
+        <h3><li><a href="/buildingtypedelete/{{buildingtype.id}}">Delete</a></li></h3>
+        <h3><li><a href="/buildingtypeupdate/{{buildingtype.id}}">Update</a></li></h3>
+    </ol>
+{%endblock%}

@@ -1,0 +1,18 @@
+{% extends "crmapp/base.html" %}
+{%block body_block%}
+    <h1>BuildingType:</h1>
+    <table border="2">
+        <thead>
+            <th>ID</th>
+            <th>Building Type</th>
+        </thead>
+        {% for i in buildingtype_list %}
+        <tr>
+            <td><a href="/{{i.id}}">{{i.id}}</a></td>
+            <td>{{i.building_type}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br/><br/><br/>
+    <a href="/buildingtypecreate">Add Building Type</a>
+{%endblock%}

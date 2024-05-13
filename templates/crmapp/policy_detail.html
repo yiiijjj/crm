@@ -1,0 +1,15 @@
+{% extends "crmapp/base.html" %}
+{%block body_block%}
+    <h1>Policy Details</h1>
+    <ol>
+        <h3><li>Policy Name: {{policy.policy_name}}</li></h3>
+        <h3><li>Policy Type: {{policy.policy_type}}</li></h3>
+        <h3><li>Agency: {{policy.agency}}</li></h3>
+        <h3><li>Agent: {{policy.agent}}</li></h3>
+        <h3><li>Vehicle: {{policy.vehicle}}</li></h3>
+        <h3><li>Building: {{policy.building}}</li></h3>
+        <h3><li>Customer: {{policy.customer}}</li></h3>
+        <h3><li><a href="/policydelete/{{policy.id}}">Delete</a></li></h3>
+        <h3><li><a href="/policyupdate/{{policy.id}}">Update</a></li></h3>
+    </ol>
+{%endblock%}

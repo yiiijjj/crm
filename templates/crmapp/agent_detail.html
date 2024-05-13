@@ -1,0 +1,13 @@
+{% extends "crmapp/base.html" %}
+{%block body_block%}
+    <h1>Agent Details</h1>
+    <ol>
+        <h3><li>First Name: {{agent.first_name}}</li></h3>
+        <h3><li>Last Name: {{agent.last_name}}</li></h3>
+        <h3><li>Address: {{agent.address}}</li></h3>
+        <h3><li>Phone: {{agent.phone}}</li></h3>
+        <h3><li>Email: {{agent.email}}</li></h3>
+        <h3><li><a href="/agentdelete/{{agent.id}}">Delete</a></li></h3>
+        <h3><li><a href="/agentupdate/{{agent.id}}">Update</a></li></h3>
+    </ol>
+{%endblock%}

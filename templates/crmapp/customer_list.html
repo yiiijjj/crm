@@ -1,0 +1,28 @@
+{% extends "crmapp/base.html" %}
+{%block body_block%}
+    <h1>Customer:</h1>
+    <table border="2">
+        <thead>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>DOB</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Email</th>
+        </thead>
+        {% for i in customer_list %}
+        <tr>
+            <td><a href="/{{i.id}}">{{i.id}}</a></td>
+            <td>{{i.first_name}}</td>
+            <td>{{i.last_name}}</td>
+            <td>{{i.dob}}</td>
+            <td>{{i.address}}</td>
+            <td>{{i.phone}}</td>
+            <td>{{i.email}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br/><br/><br/>
+    <a href="/customercreate">Add Customer</a>
+{%endblock%}

@@ -1,0 +1,10 @@
+{% extends "crmapp/base.html" %}
+{%block body_block%}
+    <h1>Delete Building:</h1>
+    <h1>{{building.address}}</h1>
+    <form method="post">
+        <input type="submit" value="Confirm">
+        <a href="/{{building.id}}">Cancel</a>
+        {%csrf_token%}
+    </form>
+{%endblock%}

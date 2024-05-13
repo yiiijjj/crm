@@ -1,0 +1,13 @@
+{% extends "crmapp/base.html" %}
+{%block body_block%}
+    <h1>Customer Details</h1>
+    <ol>
+        <h3><li>First Name: {{customer.first_name}}</li></h3>
+        <h3><li>Last Name: {{customer.last_name}}</li></h3>
+        <h3><li>Address: {{customer.address | upper}}</li></h3>
+        <h3><li>phone: {{customer.phone}}</li></h3>
+        <h3><li>email: {{customer.email}}</li></h3>
+        <h3><li><a href="/customerdelete/{{customer.id}}">Delete</a></li></h3>
+        <h3><li><a href="/customerupdate/{{customer.id}}">Update</a></li></h3>
+    </ol>
+{%endblock%}

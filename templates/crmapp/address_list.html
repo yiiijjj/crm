@@ -1,0 +1,26 @@
+{% extends "crmapp/base.html" %}
+{%block body_block%}
+    <h1>Addresses:</h1>
+    <table border="2">
+        <thead>
+            <th>ID</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>County</th>
+        </thead>
+        {% for i in address_list %}
+        <tr>
+            <td><a href="/{{i.id}}">{{i.id}}</a></td>
+            <td>{{i.street}}</td>
+            <td>{{i.city}}</td>
+            <td>{{i.state | upper}}</td>
+            <td>{{i.zip}}</td>
+            <td>{{i.county}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br/><br/><br/>
+    <a href="/create">Add Address</a>
+{%endblock%}

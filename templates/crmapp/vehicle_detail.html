@@ -1,0 +1,12 @@
+{% extends "crmapp/base.html" %}
+{%block body_block%}
+    <h1>Vehicle Details</h1>
+    <ol>
+        <h3><li>City: {{vehicle.year}}</li></h3>
+        <h3><li>State: {{vehicle.make}}</li></h3>
+        <h3><li>Zip: {{vehicle.model}}</li></h3>
+        <h3><li>County: {{vehicle.VIN}}</li></h3>
+        <h3><li><a href="/vehicledelete/{{vehicle.id}}">Delete</a></li></h3>
+        <h3><li><a href="/vehicleupdate/{{vehicle.id}}">Update</a></li></h3>
+    </ol>
+{%endblock%}

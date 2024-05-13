@@ -1,0 +1,10 @@
+{% extends "crmapp/base.html" %}
+{%block body_block%}
+    <h1>Delete Customer:</h1>
+    <h1>{{customer.first_name}} {{customer.last_name}}, {{customer.dob}} {{customer.address}}, {{customer.phone}}, {{customer.email}}</h1>
+    <form method="post">
+        <input type="submit" value="Confirm">
+        <a href="/{{customer.id}}">Cancel</a>
+        {%csrf_token%}
+    </form>
+{%endblock%}

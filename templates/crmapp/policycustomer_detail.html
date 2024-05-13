@@ -1,0 +1,10 @@
+{% extends "crmapp/base.html" %}
+{%block body_block%}
+    <h1>Policy Customer Details</h1>
+    <ol>
+        <h3><li>Policy: {{policycustomer.street}}</li></h3>
+        <h3><li>Customer: {{policycustomer.city}}</li></h3>
+        <h3><li><a href="/policycustomerdelete/{{policycustomer.id}}">Delete</a></li></h3>
+        <h3><li><a href="/policycustomerupdate/{{policycustomer.id}}">Update</a></li></h3>
+    </ol>
+{%endblock%}

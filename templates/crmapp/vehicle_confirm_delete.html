@@ -1,0 +1,10 @@
+{% extends "crmapp/base.html" %}
+{%block body_block%}
+    <h1>Delete Vehicle:</h1>
+    <h1>{{vehicle.year}} {{vehicle.make}}, {{vehicle.model}} {{vehicle.VIN}}</h1>
+    <form method="post">
+        <input type="submit" value="Confirm">
+        <a href="/{{vehicle.id}}">Cancel</a>
+        {%csrf_token%}
+    </form>
+{%endblock%}
